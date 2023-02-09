@@ -1,5 +1,8 @@
 import React, { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 import "./App.css";
+import Header from "./Components/Header"
 
 function App() {
 	const [message, setMessage] = useState("");
@@ -19,7 +22,8 @@ function App() {
 	};
 
 	return (
-		<div className="App">
+      <div className="App">
+         <Header />
 			<form onSubmit={handleSubmit}>
 				<textarea
 					value={message}
@@ -27,7 +31,7 @@ function App() {
 				></textarea>
 				<button type="submit">Submit</button>
 			</form>
-			<div>{response}</div>
+			<div><h5>Response:</h5><h6 className="m-3 p-3">{response}</h6></div>
 		</div>
 	);
 }

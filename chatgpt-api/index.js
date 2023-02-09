@@ -21,13 +21,14 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.post("/", async (req, res) => {
+	const { message } = req.body;
 	const response = await openai.createCompletion({
 		model: "text-davinci-003",
-		prompt: "what is a popular fps game?",
-		max_tokens: 70,
+		prompt: `Give me dinner ideas if I had the following ingredients: ${message}`,
+		max_tokens: 200,
 		temperature: 0,
 	});
-	console.log(response.data);
+	console.log(response.data.choices[0].text);
 	if (response.data.choices[0].text) {
 		res.json({
 			message: response.data.choices[0].text,
