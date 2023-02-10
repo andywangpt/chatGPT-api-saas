@@ -31,7 +31,7 @@ app.post("/", async (req, res) => {
 	console.log(response.data);
 	if (response.data.choices[0].text) {
 		const displayChoiceText = (response) => {
-			const readable = response.data.choices[0].text.replace(/\n/g, "\n\n");
+			const readable = response.data.choices[0].text;
 			console.log(readable);
 			return readable;
 		};
