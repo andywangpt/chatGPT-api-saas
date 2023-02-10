@@ -23,7 +23,9 @@ function App() {
 
 	return (
       <div className="App">
+         
          <Header />
+
 			<form onSubmit={handleSubmit}>
 				<textarea
 					value={message}
@@ -31,7 +33,12 @@ function App() {
 				></textarea>
 				<button type="submit">Submit</button>
 			</form>
-			<div><h5>Response:</h5><h6 className="m-3 p-3">{response}</h6></div>
+			
+         <div className="d-flex bg-light mx-5 my-3 px-4 py-1">
+            <h5>Response:</h5>
+            <p className="">{response}</p>
+         </div>
+
 		</div>
 	);
 }

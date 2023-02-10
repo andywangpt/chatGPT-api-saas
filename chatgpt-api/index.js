@@ -28,10 +28,15 @@ app.post("/", async (req, res) => {
 		max_tokens: 200,
 		temperature: 0,
 	});
-	console.log(response.data.choices[0].text);
+	console.log(response.data);
 	if (response.data.choices[0].text) {
+		const displayChoiceText = (response) => {
+			const readable = response.data.choices[0].text.replace(/\n/g, "\n\n");
+			console.log(readable);
+			return readable;
+		};
 		res.json({
-			message: response.data.choices[0].text,
+			message: displayChoiceText(response),
 		});
 	}
 });
