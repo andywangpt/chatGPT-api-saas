@@ -16,7 +16,6 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 //const response = await openai.listEngines();
 
-console.log(process.env.OPENAI_API_KEY);
 app.use(bodyParser.json());
 app.use(cors());
 
