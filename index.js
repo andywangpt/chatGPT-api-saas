@@ -3,6 +3,8 @@ require("dotenv").config();
 const OpenAI = require("openai");
 const { Configuration, OpenAIApi } = OpenAI;
 
+
+const path = require("path");
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
@@ -18,6 +20,8 @@ const openai = new OpenAIApi(configuration);
 
 app.use(bodyParser.json());
 app.use(cors());
+
+app.use("/", express.static(path.join(__dirname, "client", "build")));
 
 app.post("/", async (req, res) => {
 	const { message } = req.body;
