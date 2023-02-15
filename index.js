@@ -3,7 +3,6 @@ require("dotenv").config();
 const OpenAI = require("openai");
 const { Configuration, OpenAIApi } = OpenAI;
 
-
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const port = 3001;
@@ -11,7 +10,6 @@ const port = 3001;
 const express = require("express");
 const path = require("path");
 const app = express();
-
 
 const configuration = new Configuration({
 	organization: "org-DCFtjpp62k0AocWmr8BLLFpy",
@@ -45,7 +43,6 @@ app.post("/", async (req, res) => {
 		});
 	}
 });
-
 
 app.use(express.static(path.join(__dirname, "build")));
 
