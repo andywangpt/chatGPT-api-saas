@@ -23,7 +23,7 @@ const openai = new OpenAIApi(configuration);
 app.use(bodyParser.json());
 app.use(cors());
 
-// app.use("/", express.static(path.join(__dirname, "client", "build")));
+app.use("/", express.static(path.join(__dirname, "client", "build")));
 
 app.post("/", async (req, res) => {
 	const { message } = req.body;
@@ -47,11 +47,11 @@ app.post("/", async (req, res) => {
 });
 
 
-// app.use(express.static(path.join(__dirname, "build")));
+app.use(express.static(path.join(__dirname, "build")));
 
-// app.get("/", function (req, res) {
-// 	res.sendFile(path.join(__dirname, "build", "index.html"));
-// });
+app.get("/", function (req, res) {
+	res.sendFile(path.join(__dirname, "build", "index.html"));
+});
 
 app.listen(port, () => {
 	console.log("Example app listening on 3000");
