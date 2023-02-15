@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./App.css";
-import Header from "./Components/Header"
+import Header from "./Components/Header";
 
 function App() {
 	const [message, setMessage] = useState("");
@@ -22,9 +22,8 @@ function App() {
 	};
 
 	return (
-      <div className="App">
-         
-         <Header />
+		<div className="App">
+			<Header />
 
 			<form onSubmit={handleSubmit}>
 				<textarea
@@ -33,12 +32,11 @@ function App() {
 				></textarea>
 				<button type="submit">Submit</button>
 			</form>
-			
-         <div className="d-flex bg-light mx-5 my-3 px-4 py-1">
-            <h5>Response:</h5>
-            <p className="">{response}</p>
-         </div>
 
+			<div className="d-flex bg-light mx-5 my-3 px-4 py-1">
+				<h5>Response:</h5>
+				<p className="">{response}</p>
+			</div>
 		</div>
 	);
 }
