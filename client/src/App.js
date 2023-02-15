@@ -10,7 +10,7 @@ function App() {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		fetch("http://localhost:3001", {
+		fetch("/", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
