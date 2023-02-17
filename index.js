@@ -5,7 +5,7 @@ const { Configuration, OpenAIApi } = OpenAI;
 
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const port = 3001;
+const port = 3000;
 
 const express = require("express");
 const path = require("path");

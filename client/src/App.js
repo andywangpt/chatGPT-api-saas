@@ -23,19 +23,64 @@ function App() {
 
 	return (
 		<div className="App">
-			<Header />
+			<div className="main-container rounded-3 m-5 p-2">
+				<div className="card-title-top">
+					<Header />
+				</div>
 
-			<form onSubmit={handleSubmit}>
-				<textarea
-					value={message}
-					onChange={(e) => setMessage(e.target.value)}
-				></textarea>
-				<button type="submit">Submit</button>
-			</form>
+				<div className="form d-block mx-auto col-9">
+					<h6 className="">
+						What left over groceries do you have in your fridge?
+					</h6>
+					<form onSubmit={handleSubmit}>
+						<input
+							className="form-control m-1"
+							type="text"
+							placeholder="beef, onions, rice"
+							value={message}
+							onChange={(e) => setMessage(e.target.value)}
+						></input>
+						<button className="btn btn-light btn-sm" type="submit">
+							Submit
+						</button>
+					</form>
+				</div>
 
-			<div className="d-flex bg-light mx-5 my-3 px-4 py-1">
-				<h5>Response:</h5>
-				<p className="">{response}</p>
+				<div className="d-block mx-auto col-9 bg-light mx-5 my-3 py-1 rounded-2">
+					<h6 className="">Response:</h6>
+					<span className=""> {response}</span>
+				</div>
+			</div>
+
+			<div className="card bg-light m-4">
+				<div className="card-title-top rounded-top m-0 p-1 text-dark">
+					<Header />
+				</div>
+
+				<div className="card-body rounded-bottom">
+					<div className="form d-block mx-auto col-9">
+						<h6 className="">
+							What left over groceries do you have in your fridge?
+						</h6>
+						<form onSubmit={handleSubmit}>
+							<input
+								className="form-control m-1"
+								type="text"
+								placeholder="beef, onions, rice"
+								value={message}
+								onChange={(e) => setMessage(e.target.value)}
+							></input>
+							<button className="btn btn-light btn-sm" type="submit">
+								Submit
+							</button>
+						</form>
+					</div>
+
+					<div className="d-block mx-auto col-9 bg-light mx-5 my-3 py-1 rounded-2">
+						<h6 className="">Response:</h6>
+						<span className=""> {response}</span>
+					</div>
+				</div>
 			</div>
 		</div>
 	);

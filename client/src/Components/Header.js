@@ -1,10 +1,10 @@
 import React from "react";
+import "./Header.css";
 
 function Header() {
 	return (
 		<>
-			<h1 className="header m-3 p-3">Clear the Fridge ChatBot</h1>
-			<h3>What left over groceries do you have in your fridge?</h3>
+			<h1 className="header m-0 mb-3">Clear the Fridge ChatBot</h1>
 		</>
 	);
 }
