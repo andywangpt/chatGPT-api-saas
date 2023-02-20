@@ -1,28 +1,32 @@
 html {
-   background-color: #557571;
+   background-color: #D49A89;
 }
 
 .App {
   text-align: center;
-  background-color:#557571;
+  max-width: 80vw;
 }
 
-.main-container {
-   background-color: #F7D1BA;
-}
-
-.card {
-   background-color: #D49A89;
-}
 
 .card-title-top {
-   background-color: #D49A89;
+   background-color: #557571;
 }
 
 .card-body {
-   background-color: #F7D1BA;
+   background-color: #F4F4F4;
 }
 
-.main {
-   background-color: #557571;
+#main {
+   background-color: #A6AA9C;
+   text-align: center;
+}
+
+.main-container {
+   background-color: #A6AA9C;
+}
+
+.card {
+   background-color: #A6AA9C;
+   max-width: 80%;
+   margin: auto;
 }

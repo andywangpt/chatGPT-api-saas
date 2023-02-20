@@ -3,6 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./App.css";
 import Header from "./Components/Header";
+import aiKitchen from "./Assets/ai-kitchen.png";
+import robotPreparesDinner from "./Assets/robot-prepares-dinner.png";
 
 function App() {
 	const [message, setMessage] = useState("");
@@ -22,16 +24,18 @@ function App() {
 	};
 
 	return (
-		<div className="App">
-			<div id="main" className="card m-5 p-0">
-				<div className="card-title-top rounded-top m-0 p-1 text-dark">
+		<div id="main" className="card">
+			<img className="card-img" src={aiKitchen} alt="Card image" />
+
+			<div className="card-img-overlay">
+				<div className="card-title-top rounded-top mt-5 mx-5 p-1">
 					<Header />
 				</div>
 
-				<div className="card-body rounded-bottom">
-					<div className="form d-block mx-auto col-9">
+				<div id="cardBody" className="card-body rounded-bottom mx-5">
+					<div className="form d-block mx-auto my-4 col-9">
 						<h6 className="">
-							What left over groceries do you have in your fridge?
+							What left over groceries do you have left in your fridge?
 						</h6>
 						<form onSubmit={handleSubmit}>
 							<input
@@ -41,16 +45,17 @@ function App() {
 								value={message}
 								onChange={(e) => setMessage(e.target.value)}
 							></input>
-							<button className="btn btn-dark btn-sm" type="submit">
+							<button className="btn btn-sm btn-dark" type="submit">
 								Submit
 							</button>
 						</form>
 					</div>
 
 					{response ? (
-						<div className="d-block mx-auto col-9 bg-light mx-5 my-3 py-1 rounded-2">
+						<div className="d-block mx-auto col-9 bg-light mx-3 my-5 pt-1 rounded-2">
+							<img src={robotPreparesDinner} className="col-1" />
 							<h6 className="">Response:</h6>
-							<span className=""> {response}</span>
+							<pre className="col-9 m-0 p-0">{response}</pre>
 						</div>
 					) : null}
 				</div>
