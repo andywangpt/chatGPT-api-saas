@@ -1,19 +1,13 @@
 html {
-   background-color: #D49A89;
+   background-color: #A9AEA7;
 }
-
-.App {
-  text-align: center;
-  max-width: 80vw;
-}
-
 
 .card-title-top {
-   background-color: #557571;
+   background-color: #1A1515;
 }
 
 .card-body {
-   background-color: #F4F4F4;
+   background-color: #ECE8E0;
 }
 
 #main {
@@ -22,11 +16,11 @@ html {
 }
 
 .main-container {
-   background-color: #A6AA9C;
+   background-color: #ECE8E0;
 }
 
 .card {
-   background-color: #A6AA9C;
+   background-color: #ECE8E0;
    max-width: 80%;
    margin: auto;
 }

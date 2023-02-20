@@ -3,15 +3,17 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./App.css";
 import Header from "./Components/Header";
-import aiKitchen from "./Assets/ai-kitchen.png";
+
 import robotPreparesDinner from "./Assets/robot-prepares-dinner.png";
 
 function App() {
 	const [message, setMessage] = useState("");
 	const [response, setResponse] = useState("");
+	const [isLoading, setIsLoading] = useState(false);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		setIsLoading(true);
 		fetch("/", {
 			method: "POST",
 			headers: {
@@ -25,8 +27,6 @@ function App() {
 
 	return (
 		<div id="main" className="card">
-			<img className="card-img" src={aiKitchen} alt="Card image" />
-
 			<div className="card-img-overlay">
 				<div className="card-title-top rounded-top mt-5 mx-5 p-1">
 					<Header />
@@ -45,17 +45,27 @@ function App() {
 								value={message}
 								onChange={(e) => setMessage(e.target.value)}
 							></input>
-							<button className="btn btn-sm btn-dark" type="submit">
-								Submit
-							</button>
+							{!isLoading ? (
+								<button className="btn btn-sm btn-dark mt-1" type="submit">
+									Submit
+								</button>
+							) : null}
 						</form>
 					</div>
 
+					{isLoading && !response ? (
+						<div class="spinner-border text-dark" role="status"></div>
+					) : null}
+
 					{response ? (
-						<div className="d-block mx-auto col-9 bg-light mx-3 my-5 pt-1 rounded-2">
-							<img src={robotPreparesDinner} className="col-1" />
-							<h6 className="">Response:</h6>
-							<pre className="col-9 m-0 p-0">{response}</pre>
+						<div className="card d-block mx-auto col-9 bg-light mx-1 my-1 rounded-2">
+							<img src={robotPreparesDinner} className="card-img-top" />
+
+							<p className="card-text">
+								<pre className="d-block mx-auto col-9 m-0 p-0 pb-1">
+									Here are some dinner ideas you can try tonight:{response}
+								</pre>
+							</p>
 						</div>
 					) : null}
 				</div>
