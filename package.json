@@ -21,7 +21,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "client": "npm run client --prefix client",
+    "client": "npm run start --prefix client",
     "dev": "concurrently \"nodemon index.js\" \"npm run client\""
   },
   "eslintConfig": {

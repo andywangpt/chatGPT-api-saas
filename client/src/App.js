@@ -28,25 +28,25 @@ function App() {
 	return (
 		<div id="main" className="card">
 			<div className="card-img-overlay">
-				<div className="card-title-top rounded-top mt-5 mx-5 p-1">
+				<div className="card-title-top rounded-top mt-3 mx-3 p-1">
 					<Header />
 				</div>
 
-				<div id="cardBody" className="card-body rounded-bottom mx-5">
-					<div className="form d-block mx-auto my-4 col-9">
+				<div id="cardBody" className="card-body rounded-bottom mx-3">
+					<div className="form d-block mx-auto my-1 col-11">
 						<h6 className="">
 							What left over groceries do you have left in your fridge?
 						</h6>
 						<form onSubmit={handleSubmit}>
 							<input
-								className="form-control m-1"
+								className="form-control m-1 mb-2"
 								type="text"
 								placeholder="beef, onions, rice"
 								value={message}
 								onChange={(e) => setMessage(e.target.value)}
 							></input>
 							{!isLoading ? (
-								<button className="btn btn-sm btn-dark mt-1" type="submit">
+								<button className="btn btn-sm btn-dark" type="submit">
 									Submit
 								</button>
 							) : null}
@@ -62,8 +62,8 @@ function App() {
 							<img src={robotPreparesDinner} className="card-img-top" />
 
 							<p className="card-text">
-								<pre className="d-block mx-auto col-9 m-0 p-0 pb-1">
-									Here are some dinner ideas you can try tonight:{response}
+								<pre className="d-flex mx-auto col-9 m-0 p-0 pb-1">
+									Here are some dinner ideas:{response}
 								</pre>
 							</p>
 						</div>
