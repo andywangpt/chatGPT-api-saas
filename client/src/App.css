@@ -2,17 +2,16 @@ html {
    background-color: #A9AEA7;
 }
 
+.card {
+   background-color:#1A1515 ;
+}
+
 .card-title-top {
    background-color: #1A1515;
 }
 
 .card-body {
    background-color: #ECE8E0;
-}
-
-#main {
-   background-color: #A9AEA7;
-   text-align: center;
 }
 
 .main-container {
@@ -23,6 +22,7 @@ html {
    background-color: #A9AEA7;
    max-width: 80%;
    margin: auto;
+      text-align: center;
 }
 
 .card-img-overlay {

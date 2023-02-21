@@ -11,10 +11,11 @@ const express = require("express");
 const path = require("path");
 const app = express();
 
-const TEST_RESPONSE = ["Beef and Onion Fried Rice",
-"-Beef and Onion Stir Fry",
-"-Beef and Onion Soup"]
-
+const TEST_RESPONSE = [
+	"Beef and Onion Fried Rice",
+	"-Beef and Onion Stir Fry",
+	"-Beef and Onion Soup",
+];
 
 const configuration = new Configuration({
 	organization: "org-DCFtjpp62k0AocWmr8BLLFpy",
@@ -32,9 +33,9 @@ app.post("/", async (req, res) => {
 	const { message } = req.body;
 	const response = await openai.createCompletion({
 		model: "text-davinci-003",
-		prompt: `Give me dinner ideas if I had the following ingredients: ${message}`,
-		max_tokens: 200,
-		temperature: 0,
+		prompt: `Give me a list of dinner ideas (but not recipes) if I had the following ingredients: ${message}.`,
+		max_tokens: 250,
+		temperature: 0.2,
 	});
 	console.log(response.data);
 	if (response.data.choices[0].text) {
@@ -45,7 +46,7 @@ app.post("/", async (req, res) => {
 		};
 		res.json({
 			message: displayChoiceText(response),
-         //message: TEST_RESPONSE,
+			//message: TEST_RESPONSE,
 		});
 	}
 });
