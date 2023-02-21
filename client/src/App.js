@@ -26,13 +26,13 @@ function App() {
 	};
 
 	return (
-		<div id="main" className="card">
-			<div className="card-img-overlay">
-				<div className="card-title-top rounded-top mt-3 mx-3 p-1">
+		<div id="main" className="card mx-auto">
+			<div className="card-img-overlay p-1">
+				<div className="card-title-top rounded-top mt-2 mx-1 p-1">
 					<Header />
 				</div>
 
-				<div id="cardBody" className="card-body rounded-bottom mx-3">
+				<div id="cardBody" className="card-body rounded-bottom mx-1">
 					<div className="form d-block mx-auto my-1 col-11">
 						<h6 className="">
 							What left over groceries do you have left in your fridge?
@@ -58,11 +58,11 @@ function App() {
 					) : null}
 
 					{response ? (
-						<div className="card d-block mx-auto col-9 bg-light mx-1 my-1 rounded-2">
+						<div className="card d-flex mx-auto col-9 bg-light mx-1 my-1 rounded-2">
 							<img src={robotPreparesDinner} className="card-img-top" />
 
 							<p className="card-text">
-								<pre className="d-flex mx-auto col-9 m-0 p-0 pb-1">
+								<pre className="mx-auto col-9 m-0 p-0 pb-1">
 									Here are some dinner ideas:{response}
 								</pre>
 							</p>

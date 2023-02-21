@@ -11,16 +11,20 @@ html {
 }
 
 #main {
-   background-color: #A6AA9C;
+   background-color: #A9AEA7;
    text-align: center;
 }
 
 .main-container {
-   background-color: #ECE8E0;
+   background-color: #A9AEA7;
 }
 
 .card {
-   background-color: #ECE8E0;
+   background-color: #A9AEA7;
    max-width: 80%;
    margin: auto;
+}
+
+.card-img-overlay {
+   background-color: #A9AEA7;
 }
