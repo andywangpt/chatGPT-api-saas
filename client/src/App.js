@@ -58,7 +58,7 @@ function App() {
 					) : null}
 
 					{response ? (
-						<div className="card d-flex mx-auto col-9 bg-light mx-1 my-1 rounded-2">
+						<div className="card d-block mx-auto col-9 bg-light mx-1 my-1 rounded-2">
 							<img src={robotPreparesDinner} className="card-img-top" />
 
 							<p className="card-text">
