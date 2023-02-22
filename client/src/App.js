@@ -34,17 +34,17 @@ function App() {
 
 	return (
 		<div className="card mx-auto my-2">
-			<div className="card-title-top rounded-top">
+			<div className="card-title-top rounded-top text-center">
 				<Header />
 			</div>
 
 			<div id="cardBody" className="card-body rounded-bottom mx-0">
-				<div className="form d-block mx-auto my-1">
-					<h6 className="">
+				<div className="form d-block my-1">
+					<h6 className="text-center">
 						What left over groceries do you have left in your fridge?
 					</h6>
 
-					<form onSubmit={handleSubmit}>
+					<form onSubmit={handleSubmit} className="text-center">
 						<input
 							className="form-control"
 							type="text"
@@ -62,7 +62,10 @@ function App() {
 				</div>
 
 				{isLoading && !response ? (
-					<div class="spinner-border text-dark m-1" role="status"></div>
+					<div
+						class="spinner-border text-dark m-1 text-center"
+						role="status"
+					></div>
 				) : null}
 
 				{response ? (
@@ -72,18 +75,21 @@ function App() {
 							alt="chowGPT"
 							className="card-img-top"
 						/>
+						<div className="card-text">
+							<pre className="text-left mx-2 my-1 p-1">
+								Here are some dinner ideas:{response}
+							</pre>
+						</div>
 
-						<pre className="card-text text-left mx-2 px-1 my-1">
-							Here are some dinner ideas:{response}
-						</pre>
-
-						<button
-							className="btn btn-sm btn-dark m-1"
-							onClick={handleReset}
-							type="button"
-						>
-							Try Again!
-						</button>
+						<div className="text-center m-1">
+							<button
+								className="btn btn-sm btn-dark mt-1 mb-3"
+								onClick={handleReset}
+								type="button"
+							>
+								Try Again!
+							</button>
+						</div>
 					</div>
 				) : null}
 			</div>

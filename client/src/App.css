@@ -8,12 +8,10 @@ html {
 
 .card-title-top {
    background-color: #1A1515;
-   text-align: center;
 }
 
 .card-body {
    background-color: #ECE8E0;
-   text-align: center;
 }
 
 .main-container {
@@ -29,4 +27,8 @@ html {
 
 .card-img-overlay {
    background-color: #A9AEA7;
+}
+
+.button {
+   
 }
