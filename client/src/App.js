@@ -33,7 +33,7 @@ function App() {
 	};
 
 	return (
-		<div className="card mx-auto my-2">
+		<div className="card mx-auto my-2 col-md-6">
 			<div className="card-title-top rounded-top text-center">
 				<Header />
 			</div>
@@ -62,14 +62,13 @@ function App() {
 				</div>
 
 				{isLoading && !response ? (
-					<div
-						class="spinner-border text-dark m-1 text-center"
-						role="status"
-					></div>
+					<div className="text-center">
+						<div class="spinner-border text-dark m-1" role="status"></div>
+					</div>
 				) : null}
 
 				{response ? (
-					<div className="d-block flex-wrap mx-auto bg-light mx-1 my-1 rounded-2">
+					<div className="d-block col-md-9 flex-wrap mx-auto bg-light mx-1 my-1 rounded-2">
 						<img
 							src={robotPreparesDinner}
 							alt="chowGPT"
