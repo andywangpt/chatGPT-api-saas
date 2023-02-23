@@ -34,7 +34,7 @@ function App() {
 
 	return (
 		<div className="card mx-auto my-2 col-md-6">
-			<div className="card-title-top rounded-top text-center">
+			<div className="card-title-top rounded-top text-center mx-0">
 				<Header />
 			</div>
 
