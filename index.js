@@ -18,7 +18,7 @@ const TEST_RESPONSE = [
 ];
 
 const configuration = new Configuration({
-	organization: "org-DCFtjpp62k0AocWmr8BLLFpy",
+	organization: "org-As7vUneD0SPjG4503EqOozgJ",
 	apiKey: process.env.OPENAI_API_KEY,
 });
 const openai = new OpenAIApi(configuration);
@@ -50,7 +50,6 @@ app.post("/", async (req, res) => {
 		});
 	}
 });
-
 
 app.listen(port, () => {
 	console.log("Example app listening on 3000");

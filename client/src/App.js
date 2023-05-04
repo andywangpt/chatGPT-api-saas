@@ -39,8 +39,8 @@ function App() {
 			</div>
 
 			<div id="cardBody" className="card-body rounded-bottom mx-0">
-				<div className="form d-block my-1">
-					<h6 className="text-center">
+				<div className="form d-block mb-2">
+					<h6 className="text-center m-1 py-3">
 						What left over groceries do you have left in your fridge?
 					</h6>
 
